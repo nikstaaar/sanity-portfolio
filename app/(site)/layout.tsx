@@ -22,7 +22,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className="max-w-3xl mx-auto py-10">
-        <header>
+        <header className="flex items-center justify-between">
           <Link
             href="/"
             className="bg-gradient-to-r from-orange-400 via-red-500 
@@ -30,9 +30,13 @@ export default async function RootLayout({
           >
             NIKLAS
           </Link>
-          <div>
+          <div className="flex items-center gap-3 text-sm text-gray-600">
             {pages.map((page) => (
-              <Link href={`/${page.slug}`} key={page._id}>
+              <Link
+                href={`/${page.slug}`}
+                key={page._id}
+                className="hover:underline"
+              >
                 {page.name}
               </Link>
             ))}
