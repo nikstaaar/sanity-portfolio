@@ -1,5 +1,3 @@
-import { kMaxLength } from "buffer";
-
 const page = {
   name: "page",
   title: "Pages",
@@ -10,7 +8,7 @@ const page = {
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: { source: "title", maxLength: 96 },
+      options: { source: "name", maxLength: 96 },
     },
     {
       name: "content",
