@@ -1,14 +1,14 @@
 import { getPage } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 
+export const revalidate = 30;
+
 type Props = {
   params: { slug: string };
 };
 
 export default async function Page({ params }: Props) {
-  console.log("Page function is called, slug:", params.slug);
   const page = await getPage(params.slug);
-  console.log(page);
   return (
     <div>
       <h1
